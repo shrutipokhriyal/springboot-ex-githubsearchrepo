@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "68af513a-3741-4460-8b19-3f11ba7a00ae",
+		"name": "GithubSearch-Hottest Repositories",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "10711514"
+	},
+	"item": [
+		{
+			"name": "Valid Request :: 5 repos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/search/hottestRepos/5"
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Request :: 0 repos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/search/hottestRepos/0"
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Request :: negative repos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/search/hottestRepos/-3"
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Request :: non-numeric repos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/search/hottestRepos/abc"
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid URL :: path variable missing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/search/hottestRepos/"
+			},
+			"response": []
+		}
+	]
+}
